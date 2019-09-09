@@ -16,7 +16,7 @@ let tools = {};
 tools.firstLetter = index => !index;
 
 /**
- * Change the first letter
+ * Change the first letter cases
  * @param {string} letter
  * @example
  * convertTheFirstLetters('و') => 'w'

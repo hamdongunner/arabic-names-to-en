@@ -1,4 +1,5 @@
 module.exports = {
   و: "w",
-  ي: "y"
+  ي: "y",
+  ع: "i"
 };
