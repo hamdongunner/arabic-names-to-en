@@ -10,7 +10,7 @@ npm i -S arabic-name-to-en
 ##How to use 👨‍💻
 
 The package exports a simple function that you can pass a string of a name of more than one name in one line and it will return the name in EN
- ---
+<br />
 *سارة => Sarah*
 
 ---
