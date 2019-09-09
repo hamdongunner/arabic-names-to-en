@@ -1,6 +1,6 @@
 {
   "name": "arabic-name-to-en",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "📦 package to convert the arabic names to english ones",
   "main": "app.js",
   "scripts": {
