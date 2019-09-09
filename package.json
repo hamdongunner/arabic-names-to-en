@@ -1,0 +1,30 @@
+{
+  "name": "arabic-name-to-en",
+  "version": "0.1.0",
+  "description": "📦 package to convert the arabic names to english ones",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamdongunner/arabic-names-to-en.git"
+  },
+  "keywords": [
+    "arabic",
+    "names",
+    "convert",
+    "english",
+    "letters",
+    "arabi",
+    "arabian",
+    "names",
+    "converter"
+  ],
+  "author": "HamdonGunner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hamdongunner/arabic-names-to-en/issues"
+  },
+  "homepage": "https://github.com/hamdongunner/arabic-names-to-en#readme"
+}
