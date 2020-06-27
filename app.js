@@ -10,4 +10,6 @@ function toEnName(str) {
   return finalName;
 }
 
+console.log(toEnName('طيف'))
+
 module.exports = toEnName;
