@@ -70,7 +70,7 @@ tools.checkSpecialLetter = (enName, letter, nextLetter) =>
  * @param {string} enName
  * @param {string} letter
  * @example
- * checkLastLetter('سارة', 'ة') => 'sarah'
+ * checkLastLetter('sara', 'ة') => 'sarah'
  */
 tools.checkLastLetter = (enName, letter) =>
   lastArr.includes(letter) ? enName.slice(0, -1) + "ah" : enName;
