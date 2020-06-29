@@ -1,6 +1,6 @@
 {
   "name": "arabic-name-to-en",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "📦 package to convert the arabic names to english ones",
   "main": "app.js",
   "scripts": {
@@ -17,8 +17,10 @@
     "english",
     "letters",
     "arabi",
+    "araby",
+    "romanizations",
     "arabian",
-    "names",
+    "name",
     "converter"
   ],
   "author": "HamdonGunner",
