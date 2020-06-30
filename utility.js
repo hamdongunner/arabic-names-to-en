@@ -2,7 +2,8 @@ const caseObj = require("./cases/main.cases");
 const nextObj = require("./cases/nextLetter.cases");
 const firstObj = require("./cases/firstLetter.cases");
 const specialObj = require("./cases/specialLetter.cases");
-const lastArr = require("./cases/lastLetter.cases");
+const lastObj = require("./cases/lastLetter.cases");
+const threeObj = require("./cases/threeLetters.cases");
 
 let tools = {};
 
@@ -13,7 +14,7 @@ let tools = {};
  * @example
  * firstLetter(1) => false
  */
-tools.firstLetter = index => !index;
+tools.firstLetter = (index) => !index;
 
 /**
  * Change the first letter cases
@@ -21,7 +22,7 @@ tools.firstLetter = index => !index;
  * @example
  * convertTheFirstLetters('و') => 'w'
  */
-tools.convertTheFirstLetters = letter =>
+tools.convertTheFirstLetters = (letter) =>
   firstObj[letter] ? firstObj[letter] : tools.convertLetter(letter);
 
 /**
@@ -73,7 +74,11 @@ tools.checkSpecialLetter = (enName, letter, nextLetter) =>
  * checkLastLetter('sara', 'ة') => 'sarah'
  */
 tools.checkLastLetter = (enName, letter) =>
-  lastArr.includes(letter) ? enName.slice(0, -1) + "ah" : enName;
+  lastObj[letter]
+    ? lastObj[letter]["action"] == "slice"
+      ? enName.slice(0, -1) + lastObj[letter][letter]
+      : enName
+    : enName;
 
 /**
  * Check if the letter was the last one in the word or not
@@ -85,11 +90,26 @@ tools.checkLastLetter = (enName, letter) =>
 tools.isItLastLetter = (index, arName) => index == arName.length - 1;
 
 /**
+ *
+ * @param {string} firstLetter
+ * @param {string} secondLetter
+ * @param {string} ThirdLetter
+ */
+tools.checkThreeLetters = (firstLetter, secondLetter, thirdLetter) =>
+  threeObj[firstLetter]
+    ? threeObj[firstLetter][secondLetter]
+      ? threeObj[firstLetter][secondLetter][thirdLetter]
+        ? threeObj[firstLetter][secondLetter][thirdLetter]
+        : ""
+      : ""
+    : "";
+
+/**
  * Return the En name with first letter as capital
  * @param {string} string
  * @example
  * capitalize('marwan') => 'Marwan'
  */
-tools.capitalize = string => string.charAt(0).toUpperCase() + string.slice(1);
+tools.capitalize = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 
 module.exports = tools;
