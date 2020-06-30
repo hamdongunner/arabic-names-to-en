@@ -1,9 +1,8 @@
 const tools = require("./utility");
 
 module.exports = trans = (name) => {
+  if (!name) return "";
   let enName = "";
-  console.log(name.length);
-
   for (index in name) {
     i = parseInt(index);
     if (tools.firstLetter(i)) enName = tools.convertTheFirstLetters(name[i]);
@@ -13,6 +12,7 @@ module.exports = trans = (name) => {
       if (tools.checkThreeLetters(name[i], name[i + 1], name[i + 2]))
         enName += tools.checkThreeLetters(name[i], name[i + 1], name[i + 2]);
       else enName += tools.checkNextLetter(name[i], name[i + 1]);
+      enName += tools.checkMiddleLetters(name[i], name[i - 1], name[i + 1]);
     }
   }
   enName = tools.checkLastLetter(enName, name[name.length - 1]);

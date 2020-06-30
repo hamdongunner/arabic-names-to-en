@@ -4,6 +4,7 @@ const firstObj = require("./cases/firstLetter.cases");
 const specialObj = require("./cases/specialLetter.cases");
 const lastObj = require("./cases/lastLetter.cases");
 const threeObj = require("./cases/threeLetters.cases");
+const middleObj = require("./cases/middleLetter.cases");
 
 let tools = {};
 
@@ -100,6 +101,21 @@ tools.checkThreeLetters = (firstLetter, secondLetter, thirdLetter) =>
     ? threeObj[firstLetter][secondLetter]
       ? threeObj[firstLetter][secondLetter][thirdLetter]
         ? threeObj[firstLetter][secondLetter][thirdLetter]
+        : ""
+      : ""
+    : "";
+
+/**
+ *
+ * @param {string} firstLetter
+ * @param {string} secondLetter
+ * @param {string} ThirdLetter
+ */
+tools.checkMiddleLetters = (middle, beforeLetter, afterLetter) =>
+  middleObj[middle]
+    ? middleObj[middle][beforeLetter]
+      ? middleObj[middle][beforeLetter][afterLetter]
+        ? middleObj[middle][beforeLetter][afterLetter]
         : ""
       : ""
     : "";
