@@ -13,7 +13,7 @@ module.exports = {
     action: "slice",
   },
   ا: {
-    ء: "'",
+    ش: "I",
     action: "slice",
   },
 };
